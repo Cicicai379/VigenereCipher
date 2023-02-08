@@ -7,11 +7,11 @@ public class VigenereCipher {
         key = key.toLowerCase();
     }
 
-    public String getKey() {
+    public String getKey() { // get key
         return key;
     }
     public String encode(String Message) {
-        if(key.length() < Message.length()){
+        if(key.length() < Message.length()){ //repeat length of key
             int x = Message.length();
             for (int i = 0; ; i++)
             {
@@ -23,9 +23,9 @@ public class VigenereCipher {
             }
         }
         String ans = "";
-        Message = Message.toLowerCase();
+        Message = Message.toLowerCase(); //lowercase keyworkds
         System.out.println(Message+" "+key+" ");
-        for (int i = 0, j = 0; i < Message.length(); i++) {
+        for (int i = 0, j = 0; i < Message.length(); i++) { //encoding
             char letter = Message.charAt(i);
             if(letter<='a'||letter>='z'){
                 ans+=letter;
@@ -56,7 +56,7 @@ public class VigenereCipher {
         Message = Message.toLowerCase();
         System.out.println(Message+" "+key+" ");
 
-        for (int i = 0, j = 0; i < Message.length(); i++) {
+        for (int i = 0, j = 0; i < Message.length(); i++) {//decoding
             char letter = Message.charAt(i);
             if(letter<'a'||letter>'z'){
                 ans+=letter;
